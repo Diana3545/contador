@@ -15,16 +15,22 @@ console.log(count)
 
 });
 
-dec.addEventListener("click", ()=>{count--;num.textContent = count;
-    if (count >=0)num.style.color="#000";
+dec.addEventListener("click", ()=>{
+	if (count ===0) return;
+	count--;
+	num.textContent = count;
+
+	if (count >=0)num.style.color="green";
 	if (count >=5)num.style.color="pink";
 	if (count >=10)num.style.color="yellow";
 
 });
 
+
 res.addEventListener("click", ()=>{
 	count=0;
 	num.textContent = count;
-	num.style.color = "#000";
+	num.style.color = "green";
 
 });
+
